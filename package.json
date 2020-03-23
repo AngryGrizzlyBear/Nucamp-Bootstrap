@@ -5,21 +5,25 @@
   "main": "index.html",
   "scripts": {
     "lite": "lite-server",
-    "start": "npm run lite",
+    "start": "npm run watch:all",
     "scss": "node-sass -o css/ css/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+    "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
   },
   "author": "Evan Longwood",
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.3.0",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.13.1",
+    "onchange": "^6.1.0",
+    "parallelshell": "^3.0.1"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.4.1",
     "bootstrap-social": "^5.1.1",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "popper.js": "^1.12.9"
   }
 }
