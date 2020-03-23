@@ -6,12 +6,14 @@
   "scripts": {
     "lite": "lite-server",
     "start": "npm run lite",
+    "scss": "node-sass -o css/ css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Evan Longwood",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.3.0"
+    "lite-server": "^2.3.0",
+    "node-sass": "^4.12.0"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
